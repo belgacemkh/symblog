@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Register'|trans }}{% endblock %}
+
+{% block body %}
+	<h1>{{ 'Register'|trans }}</h1>
+
+	{{ form_errors(registrationForm) }}
+
+	{{ form_start(registrationForm) }}
+	<div>
+		{{ form_row(registrationForm.nickname) }}
+	</div>
+	<div>
+		{{ form_row(registrationForm.email) }}
+	</div>
+	<div>
+		{{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+	</div>
+	<div>
+		{{ form_row(registrationForm.agreeTerms,  {
+            label: 'Agree terms'
+        }) }}
+	</div>
+
+	<button type="submit" class="btn">{{ 'Register'|trans }}</button>
+    <p>{{ 'Already registered'|trans }} <a href="{{ path('app_login') }}">{{ 'Sign in'|trans }}</a></p>
+	{{ form_end(registrationForm) }}
+{% endblock %}

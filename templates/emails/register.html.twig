@@ -1,0 +1,6 @@
+<h1>Activation de votre compte sur SymBlog</h1>
+<p>Bonjour {{ user.nickname }}</p>
+<p>Pour activer votre compte sur SymBlog cilquez sur le lien ci-dessous.</p>
+<p><a href="{{ absolute_url(path('verif_user', {token:token})) }}">Lien</a></p>
+{{ token }}
+<p>Merci</p>
