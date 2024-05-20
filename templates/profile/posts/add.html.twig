@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{  'Add a keyword'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{  'Add a post'|trans }}</h1>
+	<section>
+		{{ form_start(form) }}
+
+           
+            <button type="submit">{{ 'Add'|trans }}</button>
+
+		{{ form_end(form) }}
+	</section>
+{% endblock %}
