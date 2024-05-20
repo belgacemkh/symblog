@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{  'Add category'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{  'Add category'|trans }}</h1>
+	<section>
+		{{ form_start(categorieForm) }}
+
+		{{ form_row(categorieForm.name) }}
+		{{ form_row(categorieForm.parent) }}
+		<button type="submit">{{ 'Add'|trans }}</button>
+
+		{{ form_end(categorieForm) }}
+	</section>
+{% endblock %}
